@@ -1,0 +1,171 @@
+.nav-items-container {
+    display: flex;
+    gap: 48px;
+    font-size: 16px;
+    font-family: 'Gilroy-Bold', sans-serif;
+}
+
+body {
+    margin: 0px;
+}
+
+li {
+    list-style: none;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 1px 15px 40px -15px #282c3f26;
+    padding: 15px 160px;
+}
+
+.swiggy-logo {
+    width: 50px;
+    background-color: #ff4f03;
+    border-radius: 16px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* * {
+    font-family: 'Gilroy-Bold', sans-serif; 
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Gilroy-Bold', sans-serif;
+        font-family: 'Gilroy-Heavy', sans-serif;
+        font-family: 'Gilroy-Light', sans-serif;
+        font-family: 'Gilroy-Medium', sans-serif;
+        font-family: 'Gilroy-Regular', sans-serif;
+} */
+
+i {
+    margin: 0px 8px;
+    font-size: 16px;
+}
+
+.main-container {
+    padding: 50px 150px 10px 150px;
+}
+
+.heading-section>h1 {
+    font-size: 40px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin: 5px 0px
+}
+
+.heading-section>p {
+    font-size: 18px;
+    font-family: 'Gilroy-Light', sans-serif;
+    opacity: 0.9;
+    margin: 5px 0px;
+    font-weight: 600;
+}
+
+/* Extra Extra Large */
+button {
+    padding: 10px 20px;
+    background-color: black;
+    color: #fff;
+    border: 1px solid white;
+    font-weight: bold;
+    border-radius: 20px;
+    margin: 18px 0px;
+}
+
+.restaurant-section > h1 {
+    font-size: 24px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    margin: 10px 0px;
+    margin-bottom: 24px;
+    font-weight: bold;
+}
+
+.restaurant-cards-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px
+}
+.restaurant-card:hover{
+    transform: scale(0.95);
+}
+.restaurant-card > img{
+    /* width: 280px; */
+    height: 160px;
+    border-radius: 18px;
+    cursor:default;
+}
+
+.restaurant-card-content{
+    padding: 8px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px
+}
+
+.restaurant-card-content > h1 {
+    margin: 0px;
+    font-size: 18px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: bold;
+}
+
+.restaurant-card-content> p {
+    margin: 0px;
+    font-size: 16px;
+    font-family: 'Gilroy-Bold', sans-serif;
+    font-weight: 600;
+    color: #02060C99;
+}
+
+.restaurant-card-content > div{
+    display: flex;
+    gap: 8px
+}
+
+.restaurant-card-content > div >span {
+        font-size: 16px;
+        font-family: 'Gilroy-Bold', sans-serif;
+}
+
+.mobile {
+    display: none;
+}
+
+/* Large */
+@media screen and (max-width: 1200px) {
+    button {
+        background-color: pink;
+    }
+}
+
+/* Medium */
+@media screen and (max-width: 992px) {
+    button {
+        background-color: aqua;
+    }
+}
+
+/* Small */
+@media screen and (max-width: 768px) {
+    button {
+        background-color: red;
+    }
+
+    .desktop {
+        display: none;   
+    }
+
+    .mobile{
+        display: block;
+    }
+}
+
+/* Extra small */
+@media screen and (max-width: 576px) {
+    button{
+        background-color: yellow;
+    }
+}

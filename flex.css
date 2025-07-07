@@ -1,0 +1,224 @@
+:root {
+    --my-color: #c83939;
+    --aditya: #7ae47a;
+}
+
+/* div{
+    height: 150px;
+    width: 150px;
+    background-color: aqua;
+    border-radius: 15px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body{
+    height: 100vh;
+    background-color: bisque;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */
+
+/* body{
+    display: grid;
+    grid-template-columns: repeat(6,200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 50px;
+}
+
+div{
+    height: 150px;
+        width: 150px;
+        background-color: aqua;
+        border-radius: 15px;
+} */
+
+nav>img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+nav {
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 50px;
+    /* position: sticky; 
+    top:0px; */
+}
+
+body {
+    margin: 0px;
+    height: 100vh;
+}
+
+ul {
+    display: flex;
+    gap: 40px
+}
+
+li {
+    list-style-type: none;
+    font-weight: bold;
+    color: darkmagenta;
+}
+
+.main-section {
+    /* background-color: red;
+    min-width: 700px; */
+    /* background-image: url("https://codetheweb.blog/assets/img/posts/css-advanced-background-images/cover.jpg"); */
+    /* background-image: linear-gradient(to bottom,violet, indigo, blue,green, yellow, orange, red); */
+    background-image: linear-gradient(#ff8a00, #e52e71);
+    /* background-image: radial-gradient(circle,#ff8a00, #e52e71); */
+    height: 92vh;
+    background-size: cover;
+    opacity: 0.9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-card {
+    width: 250px;
+    background-color: white;
+    border-radius: 40px;
+    padding: 20px;
+    box-shadow: 5px 5px 5px black;
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+img {
+    width: 100%;
+    border: 1px solid#ff8a00;
+    border-radius: 40px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 3px grey;
+}
+
+h1,
+p {
+    margin: 0px;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+    padding: 10px 20px;
+    /* margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 40px; */
+    background-color: black;
+    color: #fff;
+    border: 1px solid white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.div1 {
+    height: 150px;
+    width: 150px;
+    padding: 20px;
+    /* border: 10px solid red; */
+    margin: 20px;
+    background-color: aqua;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    /* overflow:auto; */
+    /* position: absolute;
+    z-index: 0; */
+    /* top: 50vh;
+    left: 50vw; */
+    /* transition-property: scale;
+    transition-duration: 2s;
+    transition-delay: 1s;
+    transition-timing-function: linear; */
+    /* transition: transform 2s 1s linear;
+    transition: scale 2s 1s linear; */
+    /* animation-name: my-effect;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-play-state: running; */
+    animation: my-effect 6s linear 1s infinite alternate-reverse;
+}
+
+.div1:hover{
+    animation-play-state: paused;
+}
+/* .div1:hover {
+    transform: rotate(45deg);
+    height: 300px;
+    scale: 1.5;
+    transform: translate(300px);
+    background-color: #ff8a00;
+} */
+
+@keyframes my-effect {
+    0%{
+        background-color: red;
+        transform: rotate(0deg);
+        translate: 0px;
+        scale: 0;
+    }
+    50%{
+        background-color: pink;
+        scale: 2;
+    }
+    100%{
+        background-color: yellow;
+        transform: rotate(360deg);
+        translate: 400px;
+        scale: 0;
+    }
+}
+
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+/* .div2 {
+    height: 150px;
+    width: 150px;
+    background-color: var(--aditya);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: -1;
+}
+
+
+.div3 {
+    height: 150px;
+    width: 150px;
+    background-color: var(--my-color);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

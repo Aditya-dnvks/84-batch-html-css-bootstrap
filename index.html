@@ -1,220 +1,953 @@
 <!DOCTYPE html>
 <html>
-  <head> 
-    <meta name="description" content="yhfgft">
-    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="https://static.xx.fbcdn.net/rsrc.php/yx/r/e9sqr8WnkCf.ico">
-    <link rel="stylesheet" href="./index.css" >
-    <title>CSA - HTML</title>
-    <style>
-
-    </style>
+  <head>
+    <title>Swiggy-CSA</title>
+    <link
+      rel="icon"
+      href="https://media-assets.swiggy.com/portal/m/logo_32x32.ico"
+    />
+    <link rel="stylesheet" href="swiggy.css" />
+    <link href="https://fonts.cdnfonts.com/css/gilroy-bold" rel="stylesheet" />
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
-    <h1 class="heading1 heading3">Welcome to CSA 	&#9824; &#128512;</h1>
-    <button>Some</button>
-    <h2 class="heading2">Welcome to CSA 😊</h2>
-    <h3 id="heading3">Welcome to CSA</h3>
-    <h4>Welcome to CSA</h4>
-    <h5>Welcome to CSA</h5>
-    <h6 class="heading2">Welcome to CSA</h6>
-    <button>Submit</button>
-    <ul>
-      <li>In-line CSS styles</li>
-      <li>Internal CSS styles</li>
-      <li>External CSS styles</li>
-    </ul>
-    <ul>
-      <li>Class Selectors (.)</li>
-      <li>Id selectors (#)</li>
-      <li>Tag selectors</li>
-      <li>Universal selector</li>
-    </ul>
-    <ul>
-      <li>!important keyword</li>
-      <li>In-line Styles</li>
-      <li>ID selectors</li>
-      <li>Class Selectors</li>
-      <li>Tag Selector</li>
-      <li>Universal selector</li>
-    </ul>
-    <ul>
-      <li>Color names</li>
-      <li>Hex code</li>
-      <li>rgb/rgba</li>
-      <li>hsl/hsla</li>
-    </ul>
-    <ul type="square">
-      <li>
-        Semantic HTML tags - button,img,ul,ol,header, footer, section, article
-      </li>
-      <li>Non-Semantic HTML tags - p,div,h1,h2,h6,b,u</li>
-    </ul>
-    <ul type="square">
-      <li>
-        In-line HTML tags - a,img, span, u, b, i, strong, sup, sub,input, select, iframe
-      </li>
-      <li>Block level HTML tags - h1-h6, p, all divs, br,hr,li,ul </li>
-    </ul>
-    <header></header>
-    <footer></footer>
-    <section></section>
-    <article></article>
-    <nav></nav>
-    <table border="1">
-      <caption>Marks Table</caption>
-      <tr>
-        <th colspan="2">Name</th>
-        <th>Marks</th>
-      </tr>
-      <tr>
-        <td>1</td>
-        <td>John Doe</td>
-        <td>89</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Jane</td>
-        <td>85</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Albert</td>
-        <td>99</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Albert</td>
-        <td>99</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Albert</td>
-        <td>99</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>Albert</td>
-        <td>99</td>
-      </tr>
-    </table>
-    <div style="border: 2px solid red">
-      <a
-        href="https://clay.global/blog/web-design-guide/web-layout"
-        target="_blank"
-        >Link</a
-      >
-      <a href="./flex.html">Link</a>
-      <img src="./dummy/IMG_20220308_113628.jpg" />
-      <!-- <img src="../../../../../KEC/QUALITY - BUXAR/CHECKLIST PHOTOS/ERN/DEHRI.jpg" /> -->
-      <p>
-        Lorem Ipsum is simply <u>dummy text</u> of the printing and typesetting
-        industry. <br /><br />
-        Lorem Ipsum has been the industry's standard dummy text ever since the
-        <strong>1500s</strong>, when an unknown printer took a galley of type
-        and scrambled it to make <span style="background-color: red;">a type specimen book</span>. It has survived not only
-        five centuries, but also the leap into <i>electronic typesetting</i>,
-        remaining essentially unchanged. It was popularised in the
-        <b>1960s</b> with the release of Letraset sheets containing Lorem Ipsum
-        passages, and more recently with desktop publishing software like Aldus
-        PageMaker including versions of Lorem Ipsum. a<sup>2</sup> + b<sup
-          >3</sup
-        >
-        H<sub>2</sub>O
-      </p>
+    <nav class="nav-container">
+      <img
+        src="data:image/jpeg;base64,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"
+        alt="swiggy-logo"
+        class="swiggy-logo"
+      />
+      <ul class="nav-items-container">
+        <li>
+          <span><i class="fa-solid fa-suitcase"></i></span>Swiggy Corporate
+        </li>
+        <li>
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>Search
+        </li>
+        <li>
+          <span><i class="fa-solid fa-percent"></i></span>Offers
+        </li>
+        <li>
+          <span><i class="fa-solid fa-circle-info"></i></span>Help
+        </li>
+        <li>
+          <a href="login.html">          <span><i class="fa-solid fa-right-to-bracket"></i></span>Sign In
+          </a>
+        </li>
+        <li>
+          <span><i class="fa-solid fa-cart-shopping"></i></span>Cart
+        </li>
+      </ul>
+    </nav>
+    <div class="main-container">
+      <section class="heading-section">
+        <h1 class="desktop">Pizza Desktop</h1>
+        <h1 class="mobile">Pizza Mobile</h1>
+        <p>Cheesilicious pizzas to make every day extraordinary.</p>
+        <button>Filter</button>
+        <button>Sort By</button>
+      </section>
+      <section class="restaurant-section">
+        <h1>111 Restaurants to explore</h1>
+        <div class="restaurant-cards-container">
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+          <div class="restaurant-card">
+            <img
+              src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+              alt="pizza-image"
+            />
+            <div class="restaurant-card-content">
+              <h1>Oven Story Pizza</h1>
+              <div>
+                <div style="margin-top: -2px">
+                  <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    aria-hidden="true"
+                    strokeColor="rgba(2, 6, 12, 0.92)"
+                    fillColor="rgba(2, 6, 12, 0.92)"
+                  >
+                    <circle
+                      cx="10"
+                      cy="10"
+                      r="9"
+                      fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                    ></circle>
+                    <path
+                      d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                      fill="white"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="StoreRating20_svg__paint0_linear_32982_71567"
+                        x1="10"
+                        y1="1"
+                        x2="10"
+                        y2="19"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stop-color="#21973B"></stop>
+                        <stop offset="1" stop-color="#128540"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <span> 4.3 . <strong>45-50 mins</strong></span>
+              </div>
+              <p>Pizzas, Pastas, Italian, Desserts</p>
+              <p>Purusaiwalkam</p>
+            </div>
+          </div>
+        </div>
+        <!-- <div class="container-fluid">
+          <div class="row">
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+            <div class="restaurant-card col-12 col-sm-8 col-md-6 col-lg-4 col-xl-3 col-xxl-2">
+              <img
+                src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/5/16/1934a865-9467-49af-9c31-7da2bcf42659_06e64e96-ef92-4857-898f-698484ffbefe.jpeg"
+                alt="pizza-image"
+              />
+              <div class="restaurant-card-content">
+                <h1>Oven Story Pizza</h1>
+                <div>
+                  <div style="margin-top: -2px">
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      aria-hidden="true"
+                      strokeColor="rgba(2, 6, 12, 0.92)"
+                      fillColor="rgba(2, 6, 12, 0.92)"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="9"
+                        fill="url(#StoreRating20_svg__paint0_linear_32982_71567)"
+                      ></circle>
+                      <path
+                        d="M10.0816 12.865C10.0312 12.8353 9.96876 12.8353 9.91839 12.865L7.31647 14.3968C6.93482 14.6214 6.47106 14.2757 6.57745 13.8458L7.27568 11.0245C7.29055 10.9644 7.26965 10.9012 7.22195 10.8618L4.95521 8.99028C4.60833 8.70388 4.78653 8.14085 5.23502 8.10619L8.23448 7.87442C8.29403 7.86982 8.34612 7.83261 8.36979 7.77777L9.54092 5.06385C9.71462 4.66132 10.2854 4.66132 10.4591 5.06385L11.6302 7.77777C11.6539 7.83261 11.706 7.86982 11.7655 7.87442L14.765 8.10619C15.2135 8.14085 15.3917 8.70388 15.0448 8.99028L12.7781 10.8618C12.7303 10.9012 12.7095 10.9644 12.7243 11.0245L13.4225 13.8458C13.5289 14.2757 13.0652 14.6214 12.6835 14.3968L10.0816 12.865Z"
+                        fill="white"
+                      ></path>
+                      <defs>
+                        <linearGradient
+                          id="StoreRating20_svg__paint0_linear_32982_71567"
+                          x1="10"
+                          y1="1"
+                          x2="10"
+                          y2="19"
+                          gradientUnits="userSpaceOnUse"
+                        >
+                          <stop stop-color="#21973B"></stop>
+                          <stop offset="1" stop-color="#128540"></stop>
+                        </linearGradient>
+                      </defs>
+                    </svg>
+                  </div>
+                  <span> 4.3 . <strong>45-50 mins</strong></span>
+                </div>
+                <p>Pizzas, Pastas, Italian, Desserts</p>
+                <p>Purusaiwalkam</p>
+              </div>
+            </div>
+
+          
+          </div>
+
+        </div> -->
+      </section>
     </div>
-    <br />
-    <hr width="500" />
-    <form>
-      <label for="name">Full Name</label>
-      <input type="text" placeholder="Enter Your name" value="This is static" 
-      disabled id="name" name="this is fullname"/>
-
-
-      <input type="number" required/>
-      <input type="tel"/>
-      <input type="date"/>
-      <input type="time"/>
-      <input type="month" />
-      <input type="week" />
-      <input type="email"/>
-      <input type="url"/>
-      <input type="password"/>
-      <input type="file"/>
-      <input type="color" />
-      <input type="range"/>
-
-      <label for="english">English</label>
-      <input type="checkbox" id="english" checked/>
-      <label for="Hindi">Hindi</label>
-      <input type="checkbox" id="Hindi"/>
-      <label for="Telugu">Telugu</label>
-      <input type="checkbox" id="Telugu" checked />
-
-      <h1>Select Option</h1>
-
-      <label for="option1">Option1</label>
-      <input type="radio" id="option1" name="question"/>
-
-      <label for="option2">Option2</label>
-      <input type="radio" id="option2" name="question" required />
-
-      <label for="option3">Option3</label>
-      <input type="radio" id="option3" name="question"/>
-
-      <select required>
-        <option value="">Select Month</option>
-        <option value="Jan" selected>Jan</option>
-        <option value="Feb">Feb</option>
-        <option value="Mar">Mar</option>
-        <option value="Apr">Apr</option>
-        <option value="May">May</option>
-      </select>
-
-      <button type="submit">Submit</button>
-    </form>
-    <hr width="500" />
-
-    <img
-      src="https://images.pexels.com/photos/206359/pexels-photo-206359.jpeg"
-      height="400"
-      width="400"
-      alt="Mountains near lake view"
-      class="image"
-    />
-    <!-- This code is about iframes -->
-    <!-- <iframe
-      src="https://docs.google.com/document/d/1j2AGbXh9wJCOnj8y_cgwWg5woGgF53kr_FPRQQok2Ls"
-      height="500"
-      width="700"
-    ></iframe>
-    <iframe
-      width="560"
-      height="315"
-      src="https://www.youtube.com/embed/X8BYu3dMKf0?si=-XuEJxfRGb3ppwDp"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin"
-      allowfullscreen
-    ></iframe> -->
-    <iframe src="https://www.youtube.com/embed/qJZ1Ez28C-A"      
-    width="560"
-    height="315"></iframe>
-    <ul type="square">
-      <li>Bharath</li>
-      <li>Ajay</li>
-      <li>Shiny</li>
-      <li>Tarun</li>
-      <li>Abhinay</li>
-    </ul>
-    <ol type="I">
-      <li>Bharath</li>
-      <li>Ajay</li>
-      <li>Shiny</li>
-      <li>Tarun</li>
-      <li>Abhinay</li>
-    </ol>
   </body>
 </html>
